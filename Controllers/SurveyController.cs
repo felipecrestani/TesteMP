@@ -57,8 +57,9 @@ namespace TesteMP.Controllers
                     SendEmail(model.Email,"");
 
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
+                //Save Survey to reprocess
                 //Log exception
             }            
 
