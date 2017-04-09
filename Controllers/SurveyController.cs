@@ -30,28 +30,37 @@ namespace TesteMP.Controllers
                 return View("Index",model);
             }
 
-            var sendGenericEmail = true;
+            try
+            {            
 
-            if(model.HTML > 6 && model.CSS > 6 && model.Javascript > 6)
-            {
-                SendEmail(model.Email,"Front End");
-                sendGenericEmail = false;
-            }
-            
-            if(model.Python >6 && model.Django > 6)
-            {
-                SendEmail(model.Email,"Back End");
-                sendGenericEmail = false;
-            }
+                var sendGenericEmail = true;
 
-            if(model.iOS > 6 && model.Android > 6)
-            {
-                SendEmail(model.Email,"Mobile");
-                sendGenericEmail = false;
-            }
+                if(model.HTML > 6 && model.CSS > 6 && model.Javascript > 6)
+                {
+                    SendEmail(model.Email,"Front End");
+                    sendGenericEmail = false;
+                }
+                
+                if(model.Python >6 && model.Django > 6)
+                {
+                    SendEmail(model.Email,"Back End");
+                    sendGenericEmail = false;
+                }
 
-            if(sendGenericEmail)
-                SendEmail(model.Email,"");
+                if(model.iOS > 6 && model.Android > 6)
+                {
+                    SendEmail(model.Email,"Mobile");
+                    sendGenericEmail = false;
+                }
+
+                if(sendGenericEmail)
+                    SendEmail(model.Email,"");
+
+            }
+            catch (System.Exception ex)
+            {
+                //Log exception
+            }            
 
             return View("Sucess",model.Name);
         }

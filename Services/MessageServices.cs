@@ -14,7 +14,7 @@ namespace TesteMP.Services
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress("Meus Pedidos", "testemeuspedidos@outlook.com"));
             message.To.Add(new MailboxAddress("", email));
-            message.Subject = subject;
+            message.Subject = subject + " - " + new Guid().ToString().Substring(0,5);
             message.Body = new TextPart("plain")
             {
                 Text = text
