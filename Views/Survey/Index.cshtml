@@ -1,0 +1,83 @@
+@model TesteMP.Models.Survey
+
+<div class="row">
+    <div class="col-md-8">
+        <section>
+            <form asp-controller="Survey" asp-action="Save" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                             
+                <h3 class="titleblue">Dados do Candidato</h3>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="Name" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-blue"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-blue"></span>
+                    </div>
+                </div>
+                <h3 class="titleblue">Avalie seu conhecimento de 0 a 10 nos seguintes itens:</h3>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="HTML" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="HTML" class="form-control"  />
+                        <span asp-validation-for="HTML" class="text-blue"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CSS" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="CSS" class="form-control"  />
+                        <span asp-validation-for="CSS" class="text-blue"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Javascript" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Javascript" class="form-control"  />
+                        <span asp-validation-for="Javascript" class="text-blue"></span>
+                    </div>
+                </div>
+                                <div class="form-group">
+                    <label asp-for="Python" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Python" class="form-control"  />
+                        <span asp-validation-for="Python" class="text-blue"></span>
+                    </div>
+                </div>   
+                                <div class="form-group">
+                    <label asp-for="Django" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Django" class="form-control"  />
+                        <span asp-validation-for="Django" class="text-blue"></span>
+                    </div>
+                </div>   
+                <div class="form-group">
+                    <label asp-for="iOS" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="iOS" class="form-control"  />
+                        <span asp-validation-for="iOS" class="text-blue"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Android" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Android" class="form-control"  />
+                        <span asp-validation-for="Android" class="text-blue"></span>
+                    </div>
+                </div>                     
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
